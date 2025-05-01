@@ -1,0 +1,105 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #1e1e1e;
+    color: #fff;
+  }
+  
+  .app-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #252526;
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid #333;
+  }
+  
+  .menu-bar button {
+    margin-left: 0.5rem;
+    background-color: #3c3c3c;
+    border: none;
+    color: #fff;
+    padding: 0.4rem 0.8rem;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .main-area {
+    display: flex;
+    flex: 1;
+  }
+  
+  .project-panel,
+  .effect-layer-panel {
+    width: 250px;
+    background-color: #2d2d30;
+    padding: 1rem;
+    box-sizing: border-box;
+    overflow-y: auto;
+  }
+  
+  .composition-view {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #1e1e1e;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+  }
+  
+  canvas {
+    border: 1px solid #555;
+    background-color: #000;
+  }
+  
+  .controls {
+    margin-top: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .timeline {
+    background-color: #252526;
+    height: 180px;
+    overflow-x: auto;
+    border-top: 1px solid #333;
+  }
+  
+  .timeline-header {
+    display: flex;
+    background-color: #2d2d30;
+    padding: 0.2rem 1rem;
+  }
+  
+  .time-markers {
+    display: flex;
+    gap: 40px;
+    font-size: 12px;
+    color: #ccc;
+  }
+  
+  .timeline-body {
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  .timeline-layer {
+    background-color: #444;
+    height: 24px;
+    line-height: 24px;
+    padding: 0 0.5rem;
+    color: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  

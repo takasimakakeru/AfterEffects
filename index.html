@@ -1,46 +1,66 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Web After Effects風アプリ</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>After Effects Web</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+  <div class="app-wrapper">
+    <header class="top-bar">
+      <h1>After Effects Web</h1>
+      <div class="menu-bar">
+        <button id="new-project">新規</button>
+        <button id="save-project">保存</button>
+        <button id="load-project">読み込み</button>
+      </div>
+    </header>
 
-  <!-- メニューバー -->
-  <div class="menu-bar">
-    メニューバー
-  </div>
+    <div class="main-area">
+      <!-- プロジェクトパネル -->
+      <aside class="project-panel">
+        <h2>プロジェクト</h2>
+        <ul id="project-list"></ul>
+        <button id="import-btn">インポート</button>
+      </aside>
 
-  <!-- ツールパネル -->
-  <div class="tool-bar">
-    ツールパネル
-  </div>
+      <!-- コンポジションビュー -->
+      <section class="composition-view">
+        <canvas id="composition-canvas" width="960" height="540"></canvas>
+        <div class="controls">
+          <button id="play-btn">▶</button>
+          <button id="pause-btn">⏸</button>
+          <input type="range" id="timeline-slider" min="0" max="100" value="0" />
+        </div>
+      </section>
 
-  <!-- メインエリア -->
-  <div class="main-container">
-    <!-- プロジェクトパネル -->
-    <div class="project-panel">
-      プロジェクトパネル
+      <!-- エフェクト＆レイヤーパネル -->
+      <aside class="effect-layer-panel">
+        <h2>エフェクト</h2>
+        <div id="effect-controls"></div>
+        <h2>レイヤー</h2>
+        <ul id="layer-list"></ul>
+      </aside>
     </div>
 
-    <!-- コンポジションパネル -->
-    <div class="composition-panel">
-      コンポジションパネル
-    </div>
-
-    <!-- その他パネル -->
-    <div class="side-panel">
-      その他（情報・文字など）
-    </div>
+    <!-- タイムライン -->
+    <footer class="timeline">
+      <div class="timeline-header">
+        <div class="time-markers">
+          <!-- 時間軸（例: 0s 1s 2s...）をここにJSで生成 -->
+        </div>
+      </div>
+      <div class="timeline-body" id="timeline-body">
+        <!-- レイヤー表示エリア -->
+      </div>
+    </footer>
   </div>
 
-  <!-- タイムラインパネル -->
-  <div class="timeline-panel">
-    タイムラインパネル
-  </div>
-
+  <script src="js/main.js"></script>
+  <script src="js/timeline.js"></script>
+  <script src="js/composition.js"></script>
+  <script src="js/project.js"></script>
+  <script src="js/effects.js"></script>
 </body>
 </html>
-
