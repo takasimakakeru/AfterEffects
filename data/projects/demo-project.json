@@ -1,0 +1,12 @@
+{
+    "name": "Demo Project",
+    "layers": [
+      { "name": "背景", "start": 0, "end": 15 },
+      { "name": "タイトル", "start": 2, "end": 10 }
+    ],
+    "effects": [
+      { "name": "スケール", "value": "100%" },
+      { "name": "回転", "value": "0°" }
+    ]
+  }
+  

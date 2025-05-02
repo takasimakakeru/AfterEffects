@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+  <!-- head内 -->
+<link rel="manifest" href="manifest.json" />
+<meta name="theme-color" content="#111111" />
+<link rel="apple-touch-icon" href="assets/icons/icon-192.png" />
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>After Effects Web</title>
@@ -62,5 +67,15 @@
   <script src="js/composition.js"></script>
   <script src="js/project.js"></script>
   <script src="js/effects.js"></script>
+  <!-- bodyの最後 -->
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/service-worker.js')
+        .then(reg => console.log('SW登録成功:', reg.scope))
+        .catch(err => console.error('SW登録失敗:', err));
+    });
+  }
+</script>
 </body>
 </html>
