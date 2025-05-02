@@ -29,4 +29,10 @@ document.getElementById('import-btn').addEventListener('click', () => {
       alert('保存されたプロジェクトがありません。');
     }
   });
-  
+  import * as composition from './composition.js';
+
+window.composition = composition;
+
+window.addEventListener("DOMContentLoaded", () => {
+  composition.initComposition();
+});
