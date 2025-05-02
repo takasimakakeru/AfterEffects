@@ -36,3 +36,8 @@ window.composition = composition;
 window.addEventListener("DOMContentLoaded", () => {
   composition.initComposition();
 });
+import { initTimeline } from './timeline-ui.js';
+
+window.addEventListener("DOMContentLoaded", () => {
+  initTimeline();
+});
