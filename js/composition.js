@@ -28,3 +28,30 @@ function playTimeline() {
   drawComposition();
   requestAnimationFrame(playTimeline);
 }
+import { renderFrame } from './animation.js';
+
+let startTime = null;
+let isPlaying = false;
+let ctx = null;
+
+export function initComposition() {
+  const canvas = document.getElementById("composition-canvas");
+  ctx = canvas.getContext("2d");
+}
+
+export function playComposition() {
+  isPlaying = true;
+  startTime = performance.now();
+  requestAnimationFrame(frameLoop);
+}
+
+function frameLoop(now) {
+  if (!isPlaying) return;
+  const currentTime = (now - startTime) / 1000;
+  renderFrame(ctx, currentTime);
+  requestAnimationFrame(frameLoop);
+}
+
+export function stopComposition() {
+  isPlaying = false;
+}
